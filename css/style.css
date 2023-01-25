@@ -96,3 +96,9 @@
 .project-box:hover .project-img {
     transform: translate3d(-50%, -50%, 50px) rotate(10deg) scale(1.2);
 }
+
+@media (max-width: 850px) {
+    .contact iframe {
+        width: 100%;
+    }
+}

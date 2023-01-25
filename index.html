@@ -214,7 +214,12 @@
         <section id="contact" class="contact">
             <div class="container row m-auto d-flex px-5 py-4 m-auto justify-content-between align-items-start">
                 <h1 class="text-center py-5" data-aos="fade-up" data-aos-duration="1000"><span class="fw-semibold text-primary-emphasis">Contact</span> Me</h1>
-                <div class="col" data-aos="flip-right" data-aos-duration="1000" data-aos-offset="200">
+
+                <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                    <strong>Thank You!</strong> Your message was received.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div class="col-lg-5" data-aos="flip-right" data-aos-duration="1000" data-aos-offset="200">
                     <iframe
                         class="mb-3"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.7749370783717!2d112.79591936347656!3d-7.291942499999989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb910277a2ad%3A0x92cc620eb5969f22!2sKontrakan%20Nikita!5e0!3m2!1sid!2sid!4v1674433938044!5m2!1sid!2sid"
@@ -226,26 +231,41 @@
                         referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>
-                <div class="col" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200">
-                    <div class="input-group flex-nowrap mb-3">
-                        <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
-                        <input type="text" class="form-control" placeholder="Full name" aria-label="Full Name" aria-describedby="addon-wrapping" />
-                    </div>
-                    <div class="input-group flex-nowrap mb-3">
-                        <span class="input-group-text" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
-                        <input type="email" class="form-control" placeholder="username@example.com" aria-label="Email" aria-describedby="addon-wrapping" />
-                    </div>
-                    <div class="input-group flex-nowrap mb-3">
-                        <span class="input-group-text" id="addon-wrapping"><i class="bi bi-phone"></i></span>
-                        <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="addon-wrapping" />
-                    </div>
-                    <div class="input-group flex-nowrap mb-3">
-                        <span class="input-group-text" id="addon-wrapping"><i class="bi bi-pen"></i></span>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <a href="" class="float-end">
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </a>
+                <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="200">
+                    <form name="contact-me" action="">
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping"><i class="bi bi-person"></i></span>
+                            <input type="text" class="form-control" placeholder="Full name" aria-label="Full Name" aria-describedby="addon-wrapping" name="name" />
+                        </div>
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
+                            <input type="email" class="form-control" placeholder="username@example.com" aria-label="Email" aria-describedby="addon-wrapping" name="email" />
+                        </div>
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping"><i class="bi bi-phone"></i></span>
+                            <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="addon-wrapping" name="phone" />
+                        </div>
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping"><i class="bi bi-pen"></i></span>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-send float-end">Send</button>
+                        <button type="button" disabled class="btn btn-primary btn-loading d-none float-end">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
+                    </form>
+                </div>
+                <div class="row py-3" justify-content-center align-items-center>
+                    <h5 class="text-uppercase">Or contact me via :</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://wa.me/628999401367" class="text-decoration-none text-body-emphasis"><i class="bi bi-whatsapp fs-1 text-success-emphasis me-3"></i></a>
+                            <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=daviddinhaz16@gmail.com" target="_blank" rel="nofollow noopener" title="Send email with Gmail" class="text-decoration-none text-body-emphasis"
+                                ><i class="bi bi-envelope fs-1 text-danger-emphasis me-3"></i
+                            ></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="row py-4 m-auto"></div>
@@ -291,5 +311,8 @@
                 glare: 5,
             });
         </script>
+
+        <!-- Contact FORM JS -->
+        <script src="js/contact-responses.js"></script>
     </body>
 </html>
